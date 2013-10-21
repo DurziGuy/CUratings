@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>University of Colorado - FCQ Search</title>
+	<meta charset="UTF-8" />
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" /><script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script><script type="text/javascript" src="js/jquery-1.9.1.min.js"></script><!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]--><script type="text/javascript" src="js/prettify.js"></script><script type="text/javascript" src="js/kickstart.js"></script>
+	<link href="css/kickstart.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="style.css" media="all" rel="stylesheet" type="text/css" /><script type="text/javascript">
+function valid_length(field) {
+    length_df = document.getElementById(field).value.length;
+    if (length_df < 3) {
+        update_css_class(1);
+    }
+    else if (length_df > 3) {
+	    update_css_class(2);
+    }
+    return length_df;
+}
+function update_css_class(class_index) {
+    if (class_index == 1) {
+        class_s = 'error';}
+    else {class_s = '';}
+    document.getElementById('pInput').className = class_s;
+    document.getElementById('pLabel').className = class_s;
+    return 1;
+}
+function validateSearch() {
+	t1 = valid_length('query');
+	if (t1 > 2){
+		return true;}
+	else{
+		return false;}
+}
+</script>
+</head>
+<body>
+<div class="grid">
+<h2 id="title">University <span>of</span> Colorado</h2>
+
+<h4 class="title-sub"><span>FCQ SEARCH</span></h4>
+
+<p>&nbsp;</p>
+
+<div class="clearfix" id="wrap">
+<div class="tab-content" id="teacher-search">
+<h4 class="center"><!-- Professor Search --></h4>
+
+<form action="search.php" method="POST" onsubmit="validateSearch();"><input id="pInput" name="query" onkeyup="valid_length('pInput');" placeholder="Lastname" type="text" /><br />
+<label for="pName" id="pLabel">Professor Name</label><br />
+<button type="submit" value="Search">Search</button></form>
+</div>
+
+<div class="tab-content" id="class-search">
+<h3 class="center"><!-- Class List --></h3>
+
+<form action="search-class.php" method="POST"><label for="cName">Select Subject</label> <select id="cName" name="query">
+            <option>-- Choose --</option>
+    		<option>ACCT</option>
+			<option>AIRR</option>
+			<option>AMUS</option>
+			<option>ANTH</option>
+            <option>APPM</option>
+            <option>ARAB</option>
+            <option>ARCH</option>
+            <option>AREN</option>
+            <option>ARSC</option>
+            <option>ARTF</option>
+            <option>ARTH</option>
+            <option>ARTS</option>
+            <option>ASEN</option>
+            <option>ASIA</option>
+            <option>ASTR</option>
+            <option>ATLS</option>
+            <option>ATOC</option>
+            <option>BADM</option>
+            <option>BAKR</option>
+            <option>BCOR</option>
+            <option>BECN</option>
+            <option>BPOL</option>
+            <option>BSLW</option>
+            <option>BUSM</option>
+            <option>CACI</option>
+            <option>CAMW</option>
+            <option>CASP</option>
+            <option>CEES</option>
+            <option>CESR</option>
+            <option>CHEM</option>
+            <option>CHEN</option>
+            <option>CHIN</option>
+            <option>CLAS</option>
+            <option>CNCR</option>
+            <option>COML</option>
+            <option>COMM</option>
+            <option>COMR</option>
+            <option>CONV</option>
+            <option>CSCI</option>
+            <option>CSVC</option>
+            <option>CVEN</option>
+            <option>CWCV</option>
+            <option>DNCE</option>
+            <option>EALC</option>
+            <option>EBIO</option>
+            <option>ECEN</option>
+            <option>ECON</option>
+            <option>EDUC</option>
+            <option>EHON</option>
+            <option>EMEN</option>
+            <option>EMUS</option>
+            <option>ENGL</option>
+            <option>ENVD</option>
+            <option>ENVS</option>
+            <option>ESBM</option>
+            <option>ESLG</option>
+            <option>ETHN</option>
+            <option>EVEN</option>
+            <option>FARR</option>
+            <option>FILM</option>
+            <option>FNCE</option>
+            <option>FREN</option>
+            <option>FRSI</option>
+            <option>GEEN</option>
+            <option>GEOG</option>
+            <option>GEOL</option>
+            <option>GRMN</option>
+            <option>GRTE</option>
+            <option>GSAP</option>
+            <option>GSLL</option>
+            <option>HEBR</option>
+            <option>HIND</option>
+            <option>HIST</option>
+            <option>HONR</option>
+            <option>HUEN</option>
+            <option>HUMN</option>
+            <option>IAFS</option>
+            <option>IMUS</option>
+            <option>INBU</option>
+            <option>INDO</option>
+            <option>INVS</option>
+            <option>IPHY</option>
+            <option>ITAL</option>
+            <option>JOUR</option>
+            <option>JPNS</option>
+            <option>JWST</option>
+            <option>KREN</option>
+            <option>LAMS</option>
+            <option>LAWS</option>
+            <option>LDSP</option>
+            <option>LGBT</option>
+            <option>LIBB</option>
+            <option>LIBR</option>
+            <option>LING</option>
+            <option>MATH</option>
+            <option >MBAC</option>
+            <option>MBAX</option>
+            <option>MCDB</option>
+            <option>MCEN</option>
+            <option>MEMS</option>
+            <option>MGMT</option>
+            <option>MILR</option>
+            <option>MKTG</option>
+            <option>MUEL</option>
+            <option>MUSC</option>
+            <option>MUSM</option>
+            <option>NAVR</option>
+            <option>NC M</option>
+            <option>NCAL</option>
+            <option>NCBE</option>
+            <option>NCCH</option>
+            <option>NCCM</option>
+            <option>NCED</option>
+            <option>NCEM</option>
+            <option>NCFA</option>
+            <option>NCFR</option>
+            <option>NCGR</option>
+            <option>NCHI</option>
+			<option>NCHS</option>
+			<option>NCIE</option>
+			<option>NCIT</option>
+			<option>NCJP</option>
+			<option>NCJR</option>
+			<option>NCKR</option>
+			<option>NCLN</option>
+			<option>NCLS</option>
+			<option>NCMU</option>
+			<option>NCPR</option>
+			<option>NCPS</option>
+			<option>NCRU</option>
+			<option>NCSN</option>
+			<option >NCSO</option>
+			<option>NCSP</option>
+			<option>NCSS</option>
+			<option>NCSW</option>
+			<option>NCTH</option>
+			<option>NCTM</option>
+			<option>NCWR</option>
+			<option>NORW</option>
+			<option>NRLN</option>
+			<option>NRSC</option>
+			<option>OPIM</option>
+			<option>OPMG</option>
+			<option>ORMG</option>
+			<option>PACS</option>
+			<option>PHED</option>
+			<option>PHIL</option>
+			<option>PHYS</option>
+			<option>PMUS</option>
+			<option>PORT</option>
+			<option>PRLC</option>
+			<option>PSCI</option>
+			<option>PSYC</option>
+			<option>RCPR</option>
+			<option>REAL</option>
+			<option>RLST</option>
+			<option>RSEI</option>
+			<option>RUSS</option>
+			<option>SCAN</option>
+			<option>SEWL</option>
+			<option>SLHS</option>
+			<option>SNSK</option>
+			<option>SOCY</option>
+			<option>SPAN</option>
+			<option>SSIR</option>
+			<option>STDY</option>
+			<option>SUST</option>
+			<option>SWED</option>
+			<option>SYST</option>
+			<option>TBTN</option>
+			<option>THTR</option>
+			<option>TLEN</option>
+			<option>TMUS</option>
+			<option>TOMG</option>
+			<option>TREC</option>
+			<option>TRMG</option>
+			<option>WMST</option>
+			<option>WRTG</option>
+			<option>XFCR</option>
+			<option>XTAP</option>
+			<option>XTAS</option>
+			<option>XTBU</option>
+			<option>XTCR</option>
+			<option>XTED</option>
+			<option>XTEN</option>
+			<option>XTJR</option>
+			<option>XTMU</option>
+			<option>YIDD</option>   
+			</select><button type="submit" name="submit">Search</button>   
+			</form>
+
+<h3 class="center" style="color:#ccc;margin-bottom:40px;">Search by class name.</h3>
+</div>
+<!-- Tab Menu -->
+
+<ul class="tabs">
+	<li class="current"><a href="#teacher-search">Teacher Search</a></li>
+	<li><a href="#class-search">Class Search</a></li>
+</ul>
+
+<a style="color:#0066ff; font-size:medium;" href="mailto:alexnader.campbell@colorado.edu">Got Tips? Let me know</a>
+</div>
+<!-- END WRAP --></div>
+<!-- END GRID--></body>
+</html>
